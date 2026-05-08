@@ -36,4 +36,4 @@ Sunitha Sivakumaran
 
 ---
 
-If you want, I can make it even more **attractive with emojis or badges for your GitHub profile** 🌟
+
