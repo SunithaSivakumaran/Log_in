@@ -4,10 +4,10 @@ include("conn.php");
 //creating a table call users
 $query1="CREATE TABLE users";
 if(mysqli_query($conn,$query1)){
-  echo "Users table succesfully created<br>";
+  //echo "Users table succesfully created<br>";
 }
 else {
-  echo "Coudn't create a users table.<br>";
+  //echo "Coudn't create a users table.<br>";
 }
 
 //inserting into users 2 data
@@ -24,10 +24,10 @@ foreach($credentals as $user=>$pwd){
 
     //checking whether quereis are inserted
     if(mysqli_query($conn,$query[$count])){
-        echo "Query". ($count+1) ."succesfully created<br>";
+       // echo "Query". ($count+1) ."succesfully created<br>";
     }
     else{
-      echo "Query". ($count+1) ."coudnt created<br>";
+      //echo "Query". ($count+1) ."coudnt created<br>";
     }
     $count++;
 }
