@@ -9,7 +9,7 @@
    
   try{
    $conn=mysqli_connect($db_host,$db_name,$db_password,$db);
-   echo "You are succesfully connected";
+   echo "You are succesfully connected<br>";
    }
   
   catch(mysqli_sql_exception){
