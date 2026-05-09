@@ -32,7 +32,7 @@
       if($result){
         $rows=mysqli_num_rows($result);
         if($rows>0){
-        try{
+        $count=0;
           while($cred=mysqli_fetch_assoc($result)){
             if($cred['username']==$name && password_verify($pwd,$cred['password'])){
               //this is not efficiant when its comes to more users
@@ -41,19 +41,19 @@
                 $_SESSION['pwd']=$cred['password'];
                 header("Location: home.php");
                 exit();
-            }
+            
             
         }
-        }
-        catch(mysqli_sql_exception){
-              echo "error";
-        }
+          $count++;
         }
       }
       else{
         echo "There is no data in the table";
       }
-      
+      }
+    }
+    if($count>0){
+        echo "<b><div style='color:red'>Your Username and password dont match</div></b>";
     }
 
     else {
