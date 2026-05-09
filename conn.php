@@ -1,5 +1,5 @@
 <?php
-
+  //database name admin
    
    $db_host="localhost";
    $db_name="root";
