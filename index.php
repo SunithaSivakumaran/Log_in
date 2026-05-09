@@ -37,8 +37,10 @@
             if($cred['username']==$name && password_verify($pwd,$cred['password'])){
               //this is not efficiant when its comes to more users
                 echo "You succesfully loged in";
+                $_SESSION['name']=$cred['username'];
+                $_SESSION['pwd']=$cred['password'];
                 header("Location: home.php");
-                break;
+                exit();
             }
             
         }
